@@ -1,10 +1,4 @@
-# DMN Decision Table Specification
-
-## Purpose
-
-Provides a lightweight, selective implementation of the OMG Decision Model and Notation (DMN) standard, focused exclusively on Decision Tables evaluated with a subset of S-FEEL, so callers can define and evaluate business rules without a full FEEL/DRD engine.
-
-## Requirements
+## ADDED Requirements
 
 ### Requirement: Decision Table Definition
 The system SHALL accept a decision table definition consisting of a `tableName`, a `hitPolicy`, an `inputs` array, an `outputs` array, and a `rules` array, each clause having an `id`, `name`, and `type` (`string`, `number`, `boolean`, or `date`), and each rule having a `ruleId`, `inputEntries`, and `outputEntries`. `inputs`, `outputs`, and `rules` may be empty.
@@ -149,10 +143,3 @@ When the type of a value in the evaluation context does not match the type decla
 #### Scenario: Context value type does not match input type
 - **WHEN** an input clause declares type `number` and the context supplies a `string` value for that input
 - **THEN** the system raises a `DMNTypeMismatchException`
-
-### Requirement: Implementation Language
-The implementation SHALL be written in the Go programming language.
-
-#### Scenario: Distributed as a Go package
-- **WHEN** the capability is built or imported
-- **THEN** it is provided as Go source compiled with the standard Go toolchain

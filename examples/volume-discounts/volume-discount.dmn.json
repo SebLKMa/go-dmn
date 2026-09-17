@@ -1,0 +1,17 @@
+{
+  "tableName": "VolumeDiscount",
+  "hitPolicy": "U",
+  "inputs": [
+    { "id": "i1", "name": "purchaseVolume", "type": "number" }
+  ],
+  "outputs": [
+    { "id": "o1", "name": "discount", "type": "number" },
+    { "id": "o2", "name": "tier", "type": "string" }
+  ],
+  "rules": [
+    { "ruleId": "r1", "inputEntries": ["[0..499]"], "outputEntries": ["0", "\"Standard\""] },
+    { "ruleId": "r2", "inputEntries": ["[500..1499]"], "outputEntries": ["0.05", "\"Silver\""] },
+    { "ruleId": "r3", "inputEntries": ["[1500..4999]"], "outputEntries": ["0.10", "\"Gold\""] },
+    { "ruleId": "r4", "inputEntries": [">= 5000"], "outputEntries": ["0.15", "\"Platinum\""] }
+  ]
+}
