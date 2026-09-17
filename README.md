@@ -29,6 +29,10 @@ This ends fo the implementation first spec.
 From here on, the cycle continues:  
 `openspec-propose <new features...>` -> `openspec-apply` -> `openspec-archive`
 
+## Volume discounts example
+
+![go-dmn-volume-discounts-example](./examples/volume-discounts/go-dmn-volume-discounts-example.png)
+
 ## Prompts
 
 1. `/openspec-propose`
