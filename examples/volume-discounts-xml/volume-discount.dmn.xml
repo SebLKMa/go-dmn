@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="_defs" name="volume-discount-definitions">
+  <decision id="d1" name="VolumeDiscount">
+    <decisionTable id="dt1" hitPolicy="UNIQUE">
+      <input id="i1">
+        <inputExpression id="ie1" typeRef="number">
+          <text>purchaseVolume</text>
+        </inputExpression>
+      </input>
+      <output id="o1" name="discount" typeRef="number"/>
+      <output id="o2" name="tier" typeRef="string"/>
+      <rule id="r1">
+        <inputEntry id="r1-ie1"><text>[0..499]</text></inputEntry>
+        <outputEntry id="r1-oe1"><text>0</text></outputEntry>
+        <outputEntry id="r1-oe2"><text>"Standard"</text></outputEntry>
+      </rule>
+      <rule id="r2">
+        <inputEntry id="r2-ie1"><text>[500..1499]</text></inputEntry>
+        <outputEntry id="r2-oe1"><text>0.05</text></outputEntry>
+        <outputEntry id="r2-oe2"><text>"Silver"</text></outputEntry>
+      </rule>
+      <rule id="r3">
+        <inputEntry id="r3-ie1"><text>[1500..4999]</text></inputEntry>
+        <outputEntry id="r3-oe1"><text>0.10</text></outputEntry>
+        <outputEntry id="r3-oe2"><text>"Gold"</text></outputEntry>
+      </rule>
+      <rule id="r4">
+        <inputEntry id="r4-ie1"><text>&gt;= 5000</text></inputEntry>
+        <outputEntry id="r4-oe1"><text>0.15</text></outputEntry>
+        <outputEntry id="r4-oe2"><text>"Platinum"</text></outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

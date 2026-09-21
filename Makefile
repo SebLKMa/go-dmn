@@ -15,6 +15,11 @@ build:
 			echo "copying $$f"; \
 			cp "$$f" $(BIN_DIR)/; \
 		done; \
+		for f in $$dir/*.xml; do \
+			[ -e "$$f" ] || continue; \
+			echo "copying $$f"; \
+			cp "$$f" $(BIN_DIR)/; \
+		done; \
 	done
 
 clean:
