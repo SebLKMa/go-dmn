@@ -36,7 +36,7 @@ From here on, the cycle continues:
 ## Visual Rule Editor
 To view or modify, load the `.dmn` file into `https://demo.bpmn.io/dmn`.  
 
-![visual-dmn-editor-example](./examples/volume-discounts/visual-dmn-editor-example.png)
+![visual-dmn-editor-example](./examples/volume-discounts-xml/visual-dmn-editor.png)
 
 
 ## Prompts
