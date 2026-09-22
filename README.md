@@ -33,6 +33,12 @@ From here on, the cycle continues:
 
 ![go-dmn-volume-discounts-example](./examples/volume-discounts/go-dmn-volume-discounts-example.png)
 
+## Visual Rule Editor
+To view or modify, load the `.dmn` file into `https://demo.bpmn.io/dmn`.  
+
+![visual-dmn-editor-example](./examples/volume-discounts/visual-dmn-editor-example.png)
+
+
 ## Prompts
 
 1. `/openspec-propose`
